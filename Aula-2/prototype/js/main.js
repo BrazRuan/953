@@ -7,6 +7,7 @@ function Estadio(nome, lotacao, time){
     this.torcedores = [];
 }
 Estadio.prototype.entrada = function(torcedor){
+    if(this.torcedores.length == this.lotacao) return 'Estádio Lotado!'
     this.torcedores.push(torcedor);
     console.log(this.torcedores);
     return this.torcedores.length;
@@ -39,15 +40,15 @@ Torcedor.prototype.escolherTime = function(){
 }
 
 //instanciando torcedores
-const torcedor1 = new Torcedor("Ruan", 23, "Flamengo");
-const torcedor2 = new Torcedor("Carlos", 43, "Vasco");
-const torcedor3 = new Torcedor("Lucas", 32, "Botafogo");
-const torcedor4 = new Torcedor("Lucas", 32, );
+// const torcedor1 = new Torcedor("Ruan", 23, "Flamengo");
+// const torcedor2 = new Torcedor("Carlos", 43, "Vasco");
+// const torcedor3 = new Torcedor("Lucas", 32, "Botafogo");
+// const torcedor4 = new Torcedor("Lucas", 32, );
 
 //instanciando Estádio
-const maracana = new Estadio('Maracana',5,['Flamengo','Vasco'])
-maracana.entrada(torcedor1);
-maracana.entrada(torcedor2);
-maracana.entrada(torcedor3);
+// const maracana = new Estadio('Maracana',5,['Flamengo','Vasco'])
+// maracana.entrada(torcedor1);
+// maracana.entrada(torcedor2);
+// maracana.entrada(torcedor3);
 
-console.log(maracana);
+// console.log(maracana);

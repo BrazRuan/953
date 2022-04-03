@@ -2,8 +2,26 @@
     <head>
         <title> Document</title>
         <script src="js/main.js"></script>
+        <script>
+            const maracana = new Estadio('Maracanã',10,['Flamengo','Vasco'] )
+            
+            function entrarEstadio(){ //Função realizada após clicar no botão 'entrar'
+                const nome = document.getElementById("nome").value;//lê os valores preenchidos no campo e armazena
+                const idade = document.getElementById("idade").value;//lê os valores preenchidos no campo e armazena
+                const time = document.getElementById("time").value;//lê os valores preenchidos no campo e armazena
+
+                const torcedorDom = new Torcedor(nome,idade,time);//instanceia um novo torcedor
+                console.log(torcedorDom);
+                document.getElementById('totalTorcedores').innerHTML = maracana.entrada(torcedorDom); //adiciona o novo torcedor ao quantitativo do estádio
+            }
+        </script>
     </head>
     <body>
-        
+        <input type="text" id="nome" placeholder="digite o nome"/>
+        <input type="text" id="idade" placeholder="digite a idade"/>
+        <input type="text" id="time" placeholder="digite o time"/>
+
+        <input type="button" value="entrar" onclick="entrarEstadio()"/>
+        <div id="totalTorcedores"></div>
     </body>
 </html>
