@@ -7,7 +7,7 @@ function Estadio(nome, lotacao, time){
     this.torcedores = [];
 }
 Estadio.prototype.entrada = function(torcedor){
-    if(this.torcedores.length == this.lotacao) return 'Estádio Lotado!'
+    if(this.torcedores.length == this.lotacao) return 'Estádio Lotado!';
     this.torcedores.push(torcedor);
     console.log(this.torcedores);
     return this.torcedores.length;
