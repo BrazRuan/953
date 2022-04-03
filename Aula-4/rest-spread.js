@@ -11,4 +11,4 @@ const Aluno = {
     
     //Spread
     const aluno = {...Aluno, periodo: "setimo", turno: "noite"};
-    console.log(aluno_);
+    console.log(aluno);
